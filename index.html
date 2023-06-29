@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiju Front End Task</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <section>
+
+        <!-- navbar start -->
+        <div class="container">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <img class="logo" src="./images/logo.png" width="30">
+              <a class="navbar-brand" href="#">The Brewery</a>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Doorstep Delivery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search for yummy food " aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+          <!-- navbar-end -->
+
+    </section>
+
+    <!-- content-area -->
+        <!-- carousel start -->
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12 col-lg-8">
+            
+            <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                      <h2 class="carousel-heading">Chicken</h2>
+                      <hr>
+                    <!-- first slide start -->
+                    <div class="cards-wrapper">
+                        <div class="card">
+                          <img src="./images/tawa.webp" class="card-img-top" alt="tawa-chicken">
+                          <div class="card-body">
+                            <h5 class="card-title item-1">Tawa Chicken</h5>
+                            <p class="card-text">Price ₹<span id="price-1">120</span><span class="quantity1"></span></p> 
+                            <a href="#" class="btn card-button"  onclick="handleClick(event,`item-1`,`price-1`,`item1`,120)">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="./images/andhra.jpg" class="card-img-top" alt="Andhra-chicken">
+                          <div class="card-body">
+                            <h5 class="card-title item-2">Andhra Chicken</h5>
+                            <p class="card-text">Price ₹ <span id="price-2">140</span><span class="quantity2"></span></p>
+                            <a href="#" class="btn card-button" onclick="handleClick(event,`item-2`,`price-2`,`item2`,140)">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="./images/fry.jpg" class="card-img-top" alt="fry-chicken">
+                          <div class="card-body">
+                            <h5 class="card-title item-3">Fry Chicken</h5>
+                            <p class="card-text">Price ₹ <span id="price-3">160</span><span class="quantity3"></span></p>
+                            <a href="#" class="btn card-button" onclick="handleClick(event,`item-3`,`price-3`,`item3`,160)">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- first slide end -->
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <!-- second slide start -->
+                    <h2 class="carousel-heading">Fish</h2>
+                    <hr >
+                    <div class="cards-wrapper">
+                        <div class="card">
+                          <img src="./images/masala.jpg" class="card-img-top" alt="Masala fish">
+                          <div class="card-body ">
+                            <h5 class="card-title item-4" >Masala Fish Fry</h5>
+                            <p class="card-text">Price ₹ <span id="price-4">180</span><span class="quantity4"></span></p>
+                            <a href="#" class="btn card-button" onclick="handleClick(event,`item-4`,`price-4`,`item4`,180)">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card ">
+                          <img src="./images/bihari.webp" class="card-img-top" alt="bihari fish">
+                          <div class="card-body">
+                            <h5 class="card-title item-5">Bihari Fish Fry</h5>
+                            <p class="card-text">Price ₹<span id="price-5">110</span><span class="quantity5"></span></p>
+                            <a href="#" class="btn card-button" onclick="handleClick(event,`item-5`,`price-5`,`item5`,110)">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="./images/seer.jpg" class="card-img-top" alt="seer fish  ">
+                          <div class="card-body">
+                            <h5 class="card-title item-6">Seer Fish Fry</h5>
+                            <p class="card-text">Price ₹<span id="price-6">190</span><span class="quantity6"></span></p>
+                            <a href="#" class="btn card-button" onclick="handleClick(event,`item-6`,`price-6`,`item6`,190)">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- second slide end -->
+                  </div>
+                </div>
+
+                <!-- navigation buttons carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>    
+        </div>
+
+        <!-- checkout section -->
+        <div class="col-3 checkout">
+            <h4 class="cart-head">Cart Summary</h4>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                </tr>
+                <tr id="item1"></tr>
+                <tr id="item2"></tr>
+                <tr id="item3"></tr>
+                <tr id="item4"></tr>
+                <tr id="item5"></tr>
+                <tr id="item6"></tr>
+                <tr>
+                  <th>Total</th>
+                  <td id="total"></td>
+                </tr>
+                
+              </tbody>
+              
+
+            </table>
+            <button class="btn card-button">Checkout</button>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- footer -->
+    <section id="footer" class="container">
+      <div class="row center-block" >
+        <div class="col-4">
+          <button class="btn fbutton">Contact us</button>
+        </div>
+        <div class="col-4">
+          <button class="btn fbutton">Play Store</button>
+        </div>
+        <div class="col-4">
+          <button class="btn fbutton">  App Store</button>
+        </div>
+      
+      
+      
+
+    </div>
+        <p class="copyright">© 2023 Jiju Selvarajan</p>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+ <script src="./index.js"></script>   
+</body>
+</html>
