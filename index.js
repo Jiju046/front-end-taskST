@@ -12,7 +12,8 @@ let quantity6=0
 // this is the refactored code of the below code
 
 function handleClick(event,head,amount,target,add){
-        let itemQuantity=null
+
+    let itemQuantity=null
     // quantity
     if(head=="item-1"){
       quantity1+=1
@@ -39,15 +40,15 @@ function handleClick(event,head,amount,target,add){
       itemQuantity=quantity6
     }
 
-        
     event.preventDefault()
     console.log("working");
     let price=$(`#${amount}`).html()
     let title=$(`.${head}`).html()
-    $(`#${target}`).empty().append(`<td>${title}</td> <td>${price}</td><td>${itemQuantity}</td>`)
+    $(`#${target}`).empty().prepend( `<td>${title}</td> <td>${price}</td><td>${itemQuantity}</td>`)
+    
     total=total + add; 
-    console.log(total)
-    $("#total").html(total)
+    console.log(total) 
+    $("#total").html(total) 
     
 }
 
@@ -114,7 +115,6 @@ function handleClick(event,head,amount,target,add){
 //     console.log(total)
 //     $("#total").empty().html(total)
 // }   
-
 
 
 
