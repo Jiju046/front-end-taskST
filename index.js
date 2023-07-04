@@ -1,16 +1,50 @@
 // onclick functions
 let total=0;
+let quantity1=0
+let quantity2=0
+let quantity3=0
+let quantity4=0
+let quantity5=0
+let quantity6=0
 
 
         
 // this is the refactored code of the below code
 
 function handleClick(event,head,amount,target,add){
+        let itemQuantity=null
+    // quantity
+    if(head=="item-1"){
+      quantity1+=1
+      itemQuantity=quantity1
+    }
+    else if(head=="item-2"){
+      quantity2+=1
+      itemQuantity=quantity2
+    }
+    else if(head=="item-3"){
+      quantity3+=1
+      itemQuantity=quantity3
+    }
+    else if(head=="item-4"){
+      quantity4+=1
+      itemQuantity=quantity4
+    }
+    else if(head=="item-5"){
+      quantity5+=1
+      itemQuantity=quantity5
+    }
+    else if(head=="item-6"){
+      quantity6+=1
+      itemQuantity=quantity6
+    }
+
+        
     event.preventDefault()
     console.log("working");
     let price=$(`#${amount}`).html()
     let title=$(`.${head}`).html()
-    $(`#${target}`).empty().append(`<td>${title}</td> <td>${price}</td>`)
+    $(`#${target}`).empty().append(`<td>${title}</td> <td>${price}</td><td>${itemQuantity}</td>`)
     total=total + add; 
     console.log(total)
     $("#total").html(total)
